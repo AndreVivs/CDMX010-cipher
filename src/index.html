@@ -1,83 +1,149 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title> WELCOME to the MYSTERY</title
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <!--<style>body {background-image: url("fondo universo pato.jpg") ;}</style>-->
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WELCOME TO MYSTERY PARTY</title>
+</head>
   <body>
-<h1> WELCOME TO MYSTERY PARTY 
-<br>¿ARE YOU READY?</h1>
-<em> Esperamos que sueltes todo y te diviertas</em>
-<img src="cipherwelcome.gif"
-     width="220"
-     height="200">
-<p>¡Por fa PLS! ten a la mano tu:</p>
-<ul>
+<!-- Primer pagina -->
+    <header><button type="button" class="btn" onclick="cambiarModo()">Cambiar de Estilo</button></header>
+    <header class="title"> WELCOME TO MYSTERY PARTY       
+                            ¿ARE YOU READY?</header>
+<p><em> We hope you drop everything and have fun</em></p>
+
+<p class="data">¡PLS! have at hand:</p>
+<ol>
   <li>Secret Number</li>
   <li>Text to Code</li>
-  </ul>
-  <h2> Ayudanos con tu nombre para brindarte tu codigo de ingreso</h2> 
-<input type="text" id="txt" placeholder="Holi,¿Cómo Te llamas?">
- <input type="submit" id="" value="SEND" onclick="encodeName()">
-      <div id="cont1"></div>
-    <img src="stan.gif"     
-      width="220"
-      height="200">
-   <div id="cont2"></div>
-  <input type="submit" value="ENTRAR" onclick="encodeName()">
-</header>
-<h2 style ="font-family: 'Amatic SC', cursive"> <div id="cont3"></div> </h2>
-<p>Ingresa tu Secret Number & your Text To Code Please.</p>
-<input type="number" id="num" placeholder="Tu Numero Va Aquí"> 
-<div><textarea type="text" id="txtCode" rows="4" cols="50" placeholder="El Texto Por Acá"></textarea></div>
-<img src="start.gif"     
-     width="220"
-     height="200">
-<br><input type="checkbox" 
-    name="acepto">Apartir de este momento no nos hacemos responsables de robo, hackeo, extravió ni de ninguna otra situación </input></br>
-    <br><input type="submit" value="CIFRAR" onclick="encodeTxt()"></br>
-<h2>Oficialmente hacemos entrega de tu cifrado.</h2>
-<div id="cont4"></div>
-<img src="oficialmente.gif"     
-     width="220"
-     height="200">
-<p>No permitas que nadie lo robe y asegurate de intercambiarlo con el PARTNER CORRECTO. </p>
+</ol>
 
-<p>P.D. Cuidate de los impostores y pide el numero secreto al intercambiar tu mensaje.</p>
-<button class="btn3" 
-        onclick="fn3()" 
-        id = "exito"> EXITO </button>
-<h3>PRESS THE BOOTON WHEN...</h3>
-<h2 style ="font-family: 'Sansita Swashed', cursive;">
-¡THE PARTY IS OVER!
-</h2>
-(CREATE BOOTON IN CSS)
-<h1>¡La hora de la verdad ha llegado!</h1>
-  <h3> esperamos que las luces, mascaras y musica no afectara tu juicio.</h3>
-  <h2>¡Vamos A Desencriptar!</h2>
-<p>Partner Code <input type="text" id="partner" placeholder="Code."></p>
-<p>Partner Number<input type="number" id="partnum" placeholder="Number."> 
-</p>
-<textarea id="text" 
+<textarea 
+  class="name"
+  type="text" 
+  id="name" 
+  placeholder="WRITE YOUR NAME"></textarea>
+
+  <figure>
+    <img class="bill" 
+       src="cipherwelcome.gif"
+       alt="Changing myself"
+       id="send">
+       <figcaption>Click here for obtain your loging name</figcaption>
+  </figure>
+
+  <div class="ser" id="cont1"></div>
+  <div class="ser" id="cont2"></div>
+
+   <!----<input 
+           class="but"
+           type="button" 
+           value="ENTRAR" 
+           onclick="mostrar()">-->
+
+<!-- ingresar funcion de ocultar por add eventlistener en el boton de entrar.<div id="mostrarOcultar"></div>-->
+
+<!-- Segunda pagina -->
+<div class="title" id="cont3"></div>
+<p><em> Come to encode this text.</em></p>
+
+<input 
+       class="number"
+       type="number" 
+       id="num" 
+       placeholder="Secret Number"> 
+      
+<textarea     
+               class="text1"
+               type="text" 
+               id="txtToCode"
+               rows="4" 
+               cols="50" 
+               placeholder="Text To Encode"></textarea>
+
+          <img class="stan"
+               id="cif" 
+               src="stan.gif"
+               alt="Changing myself">
+
+<textarea     
+                class="text1"
+                type="text" 
+                id="txtCode" 
+                rows="4" 
+                cols="50" 
+                placeholder="Text Encode"></textarea>            
+
+<div id="cont4"></div>
+<input type="submit"  
+        id = "over"
+        class="but"
+        value="I WANT TO DECODE">
+
+<!-- ingresar funcion de ocultar por add eventlistener en el boton de entrar.<div id="mostrarOcultar"></div>-->
+
+<!-- Tercera pagina -->
+
+<h2 class="title">¡THE PARTY IS OVER!</h2>
+  <p><em> Esperamos que las luces, mascaras y musica no afectara tu juicio.</em></p>
+
+<input 
+      class="number" 
+      type="number" 
+      id="partnum" 
+      placeholder="Secret Partner Number">
+
+    <textarea 
+           class="text2"
+           type="text" 
+           id="logingname" 
+           placeholder="Loging Partner Name"></textarea>
+    <textarea 
+          class="text2"
+          type="text" 
+          id="partnername" 
+          placeholder="Partner Name"></textarea>
+
+<!-- Partner Data -->
+
+<textarea 
+          class="text1"
+          id="partnerTxt" 
           name="text" 
-          rows="4" cols="50" placeholder="Las Letritas Raras Que Te Dieron Van De Este Lado."></textarea>
-<input type="submit" value="DESENCRIPTAR" onclick="decode()">
-<h2><div id="cont5"></div></h2>
-<p><h3>DECRYPTED TEXT</h3></p>
+          rows="4" 
+          cols="50" 
+          placeholder="Text To Decode"></textarea>
+          
+          <img  class="oficialmente"
+          id="decode" 
+          src="oficialmente.gif">
+
+          <!-- Partner Data Decode -->
+
+<textarea 
+         class="text1"
+         id="partnerTxtDec" 
+         name="text" 
+         rows="4" 
+         cols="50" 
+         placeholder="Decode Text"></textarea>
+
 <div id="cont6"></div>
-          <img src="cipher_power.jpg"     
-     width="220"
-     height="200">
-<p>El nombre de tu partner es:
-  <div id="cont7"></div> </p>
-<h4><div id="cont8"></div></h4>
-<button class="btn5" 
-        onclick="fn5()" 
-        id = "adios"> ADIOS </button>
-    </div>
-    <script type="text/javascript" src="index.js" src="cipher.js" ></script>
+<div id="cont7"></div>
+
+<div id="cont10">
+  <img 
+  class="bye"
+  id="close"
+  src="cipher_power.jpg"     
+  width="220"
+  height="200"></div>
+
+<div id="cont8" class="yaay"></div>
+<div id="cont9" class="yaay"></div>
+
+    <script src="index.js" type="module"></script>
   </body>
 </html>
 
